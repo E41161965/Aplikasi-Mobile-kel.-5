@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aqi.mylaundry2">
+
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Splashscreen" />
+
+        <!-- Menambahkan Activity Baru! -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DaftarActivity"
+            android:label="@string/buat_akun" />
+        <activity
+            android:name=".ProfilActivity"
+            android:label="@string/profil" />
+        <activity
+            android:name=".RiwayatActivity"
+            android:label="Riwayat" />
+        <activity
+            android:name=".BantuanActivity"
+            android:label="Bantuan" />
+        <activity
+            android:name=".LayananActivity"
+            android:label="Layanan" />
+        <activity
+            android:name=".OrderActivity"
+            android:label="Order" />
+        <activity
+            android:name=".NotakuActivity"
+            android:label="Notaku" />
+        <!-- <activity android:name=".ChatActivity" /> -->
+        <!-- <activity android:name=".ChatRoom" /> -->
+        <activity
+            android:name=".HubungiKamiActivity"
+            android:label="Hubungi Kami" />
+        <activity
+            android:name=".InfoTokoActivity"
+            android:label="Info Toko" />
+        <activity
+            android:name=".InfoAplikasiActivity"
+            android:label="Info Aplikasi" />
+        <activity
+            android:name=".TambahanActivity"
+            android:label="Tambahan" />
+    </application>
+
+</manifest>
