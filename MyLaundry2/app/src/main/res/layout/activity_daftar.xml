@@ -122,13 +122,14 @@
 
 <Button
     android:id="@+id/button_register"
+    android:background="@drawable/buttonstyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="25dp"
     android:layout_marginBottom="25dp"
     android:text="Daftar"
     android:textAllCaps="false"
-    android:textColor="@android:color/black"/>
+    android:textColor="#fff"/>
 </LinearLayout>
 
 </ScrollView>

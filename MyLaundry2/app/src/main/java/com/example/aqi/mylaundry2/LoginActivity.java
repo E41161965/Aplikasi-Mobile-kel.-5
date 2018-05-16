@@ -8,25 +8,11 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.Window;
-//import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
-//import com.android.volley.AuthFailureError;
-//import com.android.volley.Request;
-//import com.android.volley.RequestQueue;
-//import com.android.volley.Response;
-//import com.android.volley.VolleyError;
-//import com.android.volley.toolbox.StringRequest;
-//import com.android.volley.toolbox.Volley;
-//
-//import org.json.JSONException;
-//import org.json.JSONObject;
-//
-//import java.util.HashMap;
-//import java.util.Map;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -34,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText editText1 ,editText2; //Membuat object dari class EdiText
     Switch switch1; //Membuat object dari class Switch
     String text1 ,text2; //Membuat object string
-//    Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,66 +45,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-//        // Deklarasi komponen view
-//        editText1 = (EditText) findViewById(R.id.username);
-//        editText2 = (EditText) findViewById(R.id.password);
-//        button = (Button) findViewById(R.id.login);
-//        // Setting button ketika di klik
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Panggil void sendLogin()
-//                sendLogin();
-//            }
-//        });
-//    }
-//    private void sendLogin() {
-//        // Setting POST request ke server
-//        StringRequest loginRequest = new StringRequest(Request.Method.POST, "http://192.168.56.1/server/login.php",
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        // Handle response dari server ketika sukses dengan mengkonvert menjadi JSON
-//                        try {
-//                            JSONObject json = new JSONObject(response);
-//                            // Mengambil variable status pada response
-//                            String status = json.getString("status");
-//                            if(status.equals("success")){
-//                                // Jika Login Sukses Maka pindah ke activity lain.
-//                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-//                                startActivity(intent);
-//                                finish();
-//                            }else{
-//                                // Jika Login Gagal Maka mengeluarkan Toast dengan message.
-//                                Toast.makeText(getApplicationContext(), "Username & Password Salah", Toast.LENGTH_LONG).show();
-//                            }
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        // Handle response dari server ketika gagal
-//                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//        ){
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                HashMap<String, String> params = new HashMap<>();
-//                params.put("username", editText1.getText().toString());
-//                params.put("password", editText2.getText().toString());
-//                return params;
-//            }
-//        };
-//        // Buat antrian request pada cache android
-//        RequestQueue requestQueue = Volley.newRequestQueue(this);
-//        // Tambahkan Request pada antrian request
-//        requestQueue.add(loginRequest);
-//    }
 
     /*Membuat Method onclick pada button*/
     public void login(View view) {

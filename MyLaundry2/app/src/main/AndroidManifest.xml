@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aqi.mylaundry2">
 
-    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -52,8 +51,6 @@
         <activity
             android:name=".NotakuActivity"
             android:label="Notaku" />
-        <!-- <activity android:name=".ChatActivity" /> -->
-        <!-- <activity android:name=".ChatRoom" /> -->
         <activity
             android:name=".HubungiKamiActivity"
             android:label="Hubungi Kami" />
@@ -66,6 +63,9 @@
         <activity
             android:name=".TambahanActivity"
             android:label="Tambahan" />
+        <activity
+            android:name=".DetailTransaksiActivity"
+            android:label="Detail Transaksi"/>
     </application>
 
 </manifest>
