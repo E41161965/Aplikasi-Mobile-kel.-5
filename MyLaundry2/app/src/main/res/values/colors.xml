@@ -9,4 +9,6 @@
     <color name="M_green">#00bfa5</color>
     <color name="menu">#c1ece6</color>
     <color name="colorAccent">#ff4081</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
 </resources>
