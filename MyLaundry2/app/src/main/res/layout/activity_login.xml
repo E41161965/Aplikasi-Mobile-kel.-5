@@ -26,11 +26,12 @@
                 app:srcCompat="@drawable/elaundrylogin" />
         </LinearLayout>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="300dp"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="250dp"
+            app:cardCornerRadius="45dp"
             android:background="@drawable/trans_white_rectangle" >
 
             <RelativeLayout
@@ -89,7 +90,7 @@
                     android:textColor="#fff" />
 
             </RelativeLayout>
-        </LinearLayout>
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
 
     <RelativeLayout
