@@ -13,75 +13,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
-
 
 public class DaftarActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.editText_email)
-    EditText mEditTextEmail;
+    private EditText mEditTextEmail;
     private EditText mEditTextPassword;
     private EditText mEditTextReTypePassword;
-    @BindView(R.id.button_register)
-    Button mButtonRegister;
-    private Unbinder unbinder;
+    private Button mButtonRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar);
 
-        ButterKnife.bind(this);
-        unbinder = ButterKnife.bind(this);
-
-        mButtonRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (isValidEmail(mEditTextEmail.getText().toString())){
-                    Toast.makeText(DaftarActivity.this,
-                            "Format email sudah benar", Toast.LENGTH_SHORT).show();
-                } else {
-                    mEditTextEmail.setError("Format email salah");
-                    Toast.makeText(DaftarActivity.this,
-                            "Format email salah", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-//        mEditTextEmail = (EditText) findViewById(R.id.editText_email);
+        mEditTextEmail = (EditText) findViewById(R.id.editText_email);
         mEditTextPassword = (EditText) findViewById(R.id.editText_password);
         mEditTextReTypePassword = (EditText) findViewById(R.id.editText_passwordAgain);
-//        mButtonRegister = (Button) findViewById(R.id.button_register);
+        mButtonRegister = (Button) findViewById(R.id.button_register);
 
-//        mButtonRegister.setOnClickListener(this);
+        mButtonRegister.setOnClickListener(this);
 
         //Menambahkan tombol back pada appbar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    public static boolean isValidEmail(String email) {
-        boolean validate;
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        String emailPattern2 = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+\\.+[a-z]+";
-
-        if (email.matches(emailPattern)) {
-            validate = true;
-        } else if (email.matches(emailPattern2)) {
-            validate = true;
-        } else {
-            validate = false;
-        }
-
-        return validate;
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        unbinder.unbind();
     }
 
     @Override

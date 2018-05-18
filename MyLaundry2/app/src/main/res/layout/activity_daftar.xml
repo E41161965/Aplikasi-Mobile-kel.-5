@@ -95,7 +95,6 @@
 <android.support.design.widget.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
-    <!--app:passwordToggleEnabled="true" >-->
     <EditText
         android:id="@+id/editText_password"
         android:drawableLeft="@drawable/ic_lock_black_24dp"
@@ -109,7 +108,6 @@
 <android.support.design.widget.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
-    <!--app:passwordToggleEnabled="true" >-->
     <EditText
         android:id="@+id/editText_passwordAgain"
         android:drawableLeft="@drawable/ic_lock_black_24dp"
