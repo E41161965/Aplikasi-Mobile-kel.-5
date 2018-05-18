@@ -16,142 +16,539 @@
         android:paddingRight="16dp"
         android:paddingTop="16dp">
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Selimut Besar" />
 
-        <NumberPicker
-            android:id="@+id/numberPicker"
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selimut Besar"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+
+                <Button
+                    android:layout_toLeftOf="@id/jumlahselimutbesar"
+                    android:id="@+id/button_countmin"
+                    android:layout_width="24dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min1"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_toLeftOf="@id/button_countplus"
+                    android:id="@+id/jumlahselimutbesar"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/button_countplus"
+                    android:layout_width="24dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up1"
+                    android:tag="jumlahselimutbesar"
+                    android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Selimut Kecil" />
+            android:layout_marginTop="8dp">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Bedcover Besar" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selimut Kecil"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Bedcover Kecil" />
+                <Button
+                    android:id="@+id/button_countmin2"
+                    android:layout_toLeftOf="@id/jumlahselimutkecil"
+                    android:layout_width="24dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min2"
+                    android:textColor="@android:color/white" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Sprei Besar" />
+                <TextView
+                    android:id="@+id/jumlahselimutkecil"
+                    android:layout_toLeftOf="@id/button_countplus2"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Sprei Kecil" />
+                <Button
+                    android:id="@+id/button_countplus2"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="24dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up2"
+                    android:tag="jumlahselimutbesar"
+                    android:textColor="@android:color/white" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Boneka Besar" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Boneka Tanggung" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bed Cover Besar"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+                <Button
+                    android:id="@+id/button_countmin3"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/jumlahbedcoverbesar"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min3"
+                    android:textColor="@android:color/white" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Boneka Kecil" />
+                <TextView
+                    android:id="@+id/jumlahbedcoverbesar"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/button_countplus3"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/button_countplus3"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up3"
+                    android:textColor="@android:color/white" />
+</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Sepatu" />
+            android:layout_marginTop="8dp">
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Tas" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bed Cover Kecil"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin4"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/jumlahbedcoverkecil"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min4"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahbedcoverkecil"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:layout_toLeftOf="@id/button_countplus4"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus4"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up4"
+                    android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Sprei Besar"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin5"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/jumlahspreibesar"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min5"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahspreibesar"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/button_countplus5"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus5"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up5"
+                    android:textColor="@android:color/white" />
+ </RelativeLayout>
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="Sprei Kecil"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin6"
+                    android:layout_toLeftOf="@id/jumlahspreikecil"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min6"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahspreikecil"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/button_countplus6"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus6"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up6"
+                    android:textColor="@android:color/white" />
+
+ </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="Boneka Besar"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin7"
+                    android:layout_toLeftOf="@id/jumlahbonekabesar"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min7"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahbonekabesar"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/button_countplus7"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus7"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up7"
+                    android:textColor="@android:color/white" />
+</RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Boneka Tanggung"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin8"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:layout_toLeftOf="@id/jumlahbonekatanggung"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min8"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahbonekatanggung"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/button_countplus8"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus8"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up8"
+                    android:textColor="@android:color/white" />
+      </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:text="Boneka Kecil"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin9"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_toLeftOf="@id/jumlahbonekakecil"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min9"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahbonekakecil"
+                    android:layout_toLeftOf="@id/button_countplus9"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus9"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up9"
+                    android:textColor="@android:color/white" />
+
+       </RelativeLayout>
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Sepatu"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin10"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/jumlahsepatu"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min10"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahsepatu"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/button_countplus10"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countplus10"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up10"
+                    android:textColor="@android:color/white" />
+      </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="Tas"
+                android:textColor="#000000"
+                android:textSize="@dimen/textsize" />
+
+
+                <Button
+                    android:id="@+id/button_countplus11"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/plus"
+                    android:onClick="up11"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/jumlahtas"
+                    android:layout_width="@dimen/tombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:background="@null"
+                    android:layout_toLeftOf="@id/button_countplus11"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize" />
+
+                <Button
+                    android:id="@+id/button_countmin11"
+                    android:layout_width="@dimen/lebartombolplus"
+                    android:layout_height="@dimen/tombolplus"
+                    android:layout_toLeftOf="@id/jumlahtas"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/min"
+                    android:onClick="min11"
+                    android:textColor="@android:color/white" />
+</RelativeLayout>
+
 
         <Button
             android:id="@+id/button_tambah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
             android:text="Tambah"
             android:textAllCaps="false"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="414dp" />
+
 
     </LinearLayout>
-
 </ScrollView>
