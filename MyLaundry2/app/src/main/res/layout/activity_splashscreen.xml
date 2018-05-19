@@ -5,12 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.aqi.mylaundry2.LoginActivity"
-    android:id="@+id/splash_screen">
+    android:id="@+id/splash_screen"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/elaundry"
-        android:scaleType="fitXY"/>
-
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/elaundrylogin" />
+</LinearLayout>
 </RelativeLayout>

@@ -65,7 +65,7 @@
             android:label="Tambahan" />
         <activity
             android:name=".DetailTransaksiActivity"
-            android:label="Detail Transaksi"/>
+            android:label="Detail Transaksi" />
     </application>
 
 </manifest>
