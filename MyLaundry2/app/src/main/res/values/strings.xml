@@ -34,7 +34,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="android_dropdown_arrays">
-        <item>Falamboyan</item>
+        <item>Flamboyan</item>
         <item>Jasmine</item>
         <item>Fresh</item>
     </string-array>

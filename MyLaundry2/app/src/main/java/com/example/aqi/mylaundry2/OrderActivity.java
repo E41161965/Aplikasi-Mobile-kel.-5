@@ -87,7 +87,7 @@ public class OrderActivity extends AppCompatActivity {
                 .show();
     }
 
-    public void buttonOrder (View view) {
+    public void Order (View view) {
         TextView txtclose;
         mDialog.setContentView(R.layout.popup_order);
         txtclose =(TextView) mDialog.findViewById(R.id.txtclose);

@@ -65,43 +65,75 @@
             android:background="@android:color/darker_gray">
         </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
-            android:text="Parfum" />
+            android:layout_marginRight="100dp"
+            android:text="Parfum"
+            android:textColor="#000000"
+            android:textSize="16dp" />
 
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="6dp">
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="#2ecc71"
             android:entries="@array/android_dropdown_arrays"
             android:padding="5dp" />
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:textColor = "#000000"
+            android:layout_marginRight="30dp"
+           android:textSize="16dp"
+            android:textColor="#000000"
             android:text="Laundry Kiloan" />
 
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="6dp">
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="#2ecc71"
             android:entries="@array/android_dropdown_arrays2"
             android:padding="5dp" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
@@ -117,7 +149,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
+            android:paddingBottom="10dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor = "#000000"
@@ -131,6 +163,16 @@
             android:background="@android:color/darker_gray">
         </RelativeLayout>
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/text_box_radius">
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -143,13 +185,16 @@
                 android:lines="5"
                 android:hint="Catatan Pelanggan"/>
         </android.support.design.widget.TextInputLayout>
+        </android.support.v7.widget.CardView>
 
         <Button
             android:id="@+id/buttonOrder"
-            android:onClick="buttonOrder"
+            android:onClick="Order"
             android:background="@drawable/buttonstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
             android:text="order"
