@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:textSize="20sp"
     android:textColor="@color/colorPrimaryDark"
+    android:text="Hubungi Kami"
     android:textAlignment="center"
-    android:gravity="center"
+    android:gravity="left"
     tools:context="com.example.aqi.mylaundry2.BarangSatuanFragment">
 
 

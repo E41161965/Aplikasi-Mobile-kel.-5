@@ -62,7 +62,8 @@
             android:label="Info Toko" />
         <activity
             android:name=".InfoAplikasiActivity"
-            android:label="Info Aplikasi" />
+            android:label="Info Aplikasi"
+            android:theme="@style/Splashscreen"/>
         <activity
             android:name=".TambahanActivity"
             android:label="Tambahan" />
