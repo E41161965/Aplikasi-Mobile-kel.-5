@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
-public class HubungiKamiActivity extends AppCompatActivity {
+public class HubungiKamiActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +20,7 @@ public class HubungiKamiActivity extends AppCompatActivity {
         //Menambahkan tombol back pada appbar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-    }
+}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -71,17 +71,9 @@ public class HubungiKamiActivity extends AppCompatActivity {
 
     }
     public void gmail(View view) {
-        Button gmail;
-        gmail =(Button)findViewById(R.id.gmail);
-        gmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent();
-                i.setAction(Intent.ACTION_VIEW);
-                i.addCategory(Intent.CATEGORY_BROWSABLE);
-                i.setData(Uri.parse("https://www.instagram.com/e_laundryjember/"));
-                startActivity(i);
+       Intent i = new Intent(this, TulisEmail.class);
+        startActivity(i);
             }
-        });
-    }
+
+
 }
