@@ -68,9 +68,13 @@
             android:name=".DetailTransaksiActivity"
             android:label="Detail Transaksi" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity
             android:name=".PemesananActivity"
             android:label="Pemesanan" />
+=======
+        <activity android:name=".TulisEmail"></activity>
+>>>>>>> eceeb0ad53bc34fec25efea2d9a39bf648bd28f0
 =======
         <activity android:name=".TulisEmail"></activity>
 >>>>>>> eceeb0ad53bc34fec25efea2d9a39bf648bd28f0
