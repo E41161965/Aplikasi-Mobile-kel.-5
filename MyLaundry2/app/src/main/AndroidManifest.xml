@@ -49,9 +49,6 @@
             android:name=".LayananActivity"
             android:label="Layanan" />
         <activity
-            android:name=".OrderActivity"
-            android:label="Order" />
-        <activity
             android:name=".NotakuActivity"
             android:label="Notaku" />
         <activity
@@ -63,13 +60,16 @@
         <activity
             android:name=".InfoAplikasiActivity"
             android:label="Info Aplikasi"
-            android:theme="@style/Splashscreen"/>
+            android:theme="@style/Splashscreen" />
         <activity
             android:name=".TambahanActivity"
             android:label="Tambahan" />
         <activity
             android:name=".DetailTransaksiActivity"
             android:label="Detail Transaksi" />
+        <activity
+            android:name=".PemesananActivity"
+            android:label="Pemesanan" />
     </application>
 
 </manifest>

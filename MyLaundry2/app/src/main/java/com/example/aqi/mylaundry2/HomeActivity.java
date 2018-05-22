@@ -19,7 +19,7 @@ import android.view.MenuItem;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    private CardView layanan, order, nota;
+    private CardView layanan, pemesanan, nota;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         layanan = (CardView) findViewById(R.id.layanan);
         layanan.setOnClickListener(this);
-        order = (CardView) findViewById(R.id.order);
-        order.setOnClickListener(this);
+        pemesanan = (CardView) findViewById(R.id.pemesanan);
+        pemesanan.setOnClickListener(this);
         nota = (CardView) findViewById(R.id.nota);
         nota.setOnClickListener(this);
 
@@ -140,8 +140,8 @@ public class HomeActivity extends AppCompatActivity
                 i = new Intent(this, LayananActivity.class);
                 startActivity(i);
                 break;
-            case R.id.order:
-                i = new Intent(this, OrderActivity.class);
+            case R.id.pemesanan:
+                i = new Intent(this, PemesananActivity.class);
                 startActivity(i);
                 break;
             case R.id.nota:

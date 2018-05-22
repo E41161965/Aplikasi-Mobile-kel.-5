@@ -15,6 +15,10 @@ public class InfoAplikasiActivity extends AppCompatActivity {
 
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(InfoAplikasiActivity.this, BantuanActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

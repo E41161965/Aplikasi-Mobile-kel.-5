@@ -148,7 +148,7 @@ public class TambahanActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home){
-            Intent intent = new Intent(TambahanActivity.this, OrderActivity.class);
+            Intent intent = new Intent(TambahanActivity.this, PemesananActivity.class);
             startActivity(intent);
             finish();
         }
@@ -157,7 +157,7 @@ public class TambahanActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(TambahanActivity.this, OrderActivity.class);
+        Intent intent = new Intent(TambahanActivity.this, PemesananActivity.class);
         startActivity(intent);
         finish();
     }
