@@ -41,8 +41,8 @@ public class OrderFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_order, container, false);
 
         // Membaca dan menentukan isi TexTView
-        TextView textView = (TextView) rootView.findViewById(R.id.textView3);
-        textView.setText("+Tambahan");
+        TextView textView1 = (TextView) rootView.findViewById(R.id.textView3);
+        textView1.setText("+Tambahan");
         // Membuat span dengan tampilan berbeda dan dapat diklik
         new PatternEditableBuilder().
                 addPattern(Pattern.compile("\\+(\\w+)"), Color.BLUE,
@@ -54,7 +54,23 @@ public class OrderFragment extends Fragment {
                                 Intent intent = new Intent(getActivity(), TambahanActivity.class);
                                 getActivity().startActivity(intent);
                             }
-                        }).into(textView);
+                        }).into(textView1);
+
+        // Membaca dan menentukan isi TexTView
+        TextView textView2 = (TextView) rootView.findViewById(R.id.textView5);
+        textView2.setText("+DetailTransaksi");
+        // Membuat span dengan tampilan berbeda dan dapat diklik
+        new PatternEditableBuilder().
+                addPattern(Pattern.compile("\\+(\\w+)"), Color.BLUE,
+                        new PatternEditableBuilder.SpannableClickedListener() {
+                            @Override
+                            public void onSpanClicked(String text) {
+//                                Toast.makeText(getActivity(), "Clicked username: " + text,
+//                                        Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity(), DetailTransaksiActivity.class);
+                                getActivity().startActivity(intent);
+                            }
+                        }).into(textView2);
 
         Button button = (Button) rootView.findViewById(R.id.buttonOrder);
         button.setOnClickListener(new View.OnClickListener()
@@ -69,8 +85,6 @@ public class OrderFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         mDialog.dismiss();
-                        Intent intent = new Intent(getActivity(), DetailTransaksiActivity.class);
-                        startActivity(intent);
                     }
                 });
                 mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -83,7 +97,5 @@ public class OrderFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
     }
 }

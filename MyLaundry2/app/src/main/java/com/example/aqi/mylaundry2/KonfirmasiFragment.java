@@ -1,6 +1,7 @@
 package com.example.aqi.mylaundry2;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -30,5 +31,10 @@ public class KonfirmasiFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+    }
+
+    public void lanjutkan(View view){
+        Intent intent = new Intent(getActivity(), ProsesFragment.class);
+        getActivity().startActivity(intent);
     }
 }
