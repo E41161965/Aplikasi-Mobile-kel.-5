@@ -39,7 +39,7 @@
             android:layout_height="100dp"
             android:gravity="top"
             android:layout_marginTop="@dimen/lebartombolplus"
-            android:hint="saran/masukan" />
+            android:hint="Harap masukkan kritik dan saran Anda" />
 
         <Button
             android:id="@+id/btnOK"

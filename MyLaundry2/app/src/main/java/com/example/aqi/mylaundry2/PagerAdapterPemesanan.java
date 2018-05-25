@@ -31,8 +31,6 @@ public class PagerAdapterPemesanan extends FragmentStatePagerAdapter {
                 return new KonfirmasiFragment();
             case 2:
                 return new ProsesFragment();
-            case 3:
-                return new PengirimanFragment();
             default:
                 return null;
         }

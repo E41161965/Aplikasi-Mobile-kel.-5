@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary"
     android:padding="5dp"
     android:layout_gravity="center"
-    tools:context="com.example.aqi.mylaundry2.OrderActivity">
+    tools:context="com.example.aqi.mylaundry2.PemesananActivity">
 
     <TextView
         android:id="@+id/txtclose"
