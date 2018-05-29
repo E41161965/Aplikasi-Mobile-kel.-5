@@ -538,17 +538,18 @@
                     android:textColor="@android:color/white" />
 </RelativeLayout>
 
-
         <Button
-            android:id="@+id/button_tambah"
+            android:id="@+id/buttonTambah"
+            android:background="@drawable/buttonstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
             android:text="Tambah"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="414dp" />
-
+            android:textAllCaps="true"
+            android:textColor="#fff"/>
 
     </LinearLayout>
 </ScrollView>
