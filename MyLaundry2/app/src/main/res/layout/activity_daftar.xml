@@ -82,9 +82,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <EditText
-        android:id="@+id/editText_email"
+        android:id="@+id/editText_username"
         android:layout_width="match_parent"
-        android:hint="Email"
+        android:hint="Username"
         android:inputType="textEmailAddress"
         android:drawableLeft="@drawable/ic_account_circle_black_24dp"
         android:drawablePadding="6dp"
@@ -105,18 +105,19 @@
         android:hint="Password"/>
 </android.support.design.widget.TextInputLayout>
 
-<android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
-    <EditText
-        android:id="@+id/editText_passwordAgain"
-        android:drawableLeft="@drawable/ic_lock_black_24dp"
-        android:drawablePadding="6dp"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="Re-type your password"/>
-</android.support.design.widget.TextInputLayout>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText_passwordAgain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="6dp"
+            android:hint="Re-type your password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
 
 <Button
     android:id="@+id/button_register"

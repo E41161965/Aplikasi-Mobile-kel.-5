@@ -23,15 +23,10 @@ public class RiwayatActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home){
-            Intent intent = new Intent(RiwayatActivity.this, HomeActivity.class);
-            startActivity(intent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(RiwayatActivity.this, HomeActivity.class);
-        startActivity(intent);
-    }
+
 }

@@ -83,8 +83,7 @@ public class PemesananActivity extends AppCompatActivity {
                 .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         PemesananActivity.this.finish();
-                        Intent intent = new Intent(PemesananActivity.this, HomeActivity.class);
-                        startActivity(intent);
+
                     }
                 })
                 .setNegativeButton("Tidak", null)

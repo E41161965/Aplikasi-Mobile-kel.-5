@@ -16,8 +16,8 @@ private TextView tv1,tv2;
         setContentView(R.layout.activity_info_toko);
         tv1 = (TextView) findViewById(R.id.tv1);
         tv2 = (TextView) findViewById(R.id.tv2);
-        tv1.setLinkTextColor(Color.parseColor("#ffffffff"));
-        tv2.setLinkTextColor(Color.parseColor("#ffffffff"));
+        tv1.setLinkTextColor(Color.parseColor("#FF000000"));
+        tv2.setLinkTextColor(Color.parseColor("#FF000000"));
         Linkify.addLinks(tv1,Linkify.ALL);
         Linkify.addLinks(tv2,Linkify.ALL);
 

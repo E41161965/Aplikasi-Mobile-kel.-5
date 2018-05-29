@@ -1,7 +1,9 @@
 package com.example.aqi.mylaundry2;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
@@ -20,11 +22,14 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private CardView layanan, pemesanan, nota;
-
+    SharedPreferences sharedPreferences;
+    public static final String my_shared_preferences = "my_shared_preferences";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        sharedPreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,7 +56,7 @@ public class HomeActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            oonBackPressed();
         }
     }
 
@@ -99,7 +104,7 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_riwayat) {
             Intent intent = new Intent(HomeActivity.this, RiwayatActivity.class);
             startActivity(intent);
-            finish();
+
 
 
         } else if (id == R.id.nav_bantuan) {
@@ -111,14 +116,13 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_keluar) {
             new AlertDialog.Builder(this)
                     .setTitle("E-Laundry")
-                    .setMessage("Apakah Anda ingin keluar akun ?")
+                    .setMessage("Apakah Anda ingin logout ?")
                     .setIcon(R.drawable.elaundrylogin)
                     .setCancelable(false)
-                    .setPositiveButton("Keluar", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             HomeActivity.this.finish();
-                            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                            startActivity(intent);
+                            logout();
                         }
                     })
                     .setNegativeButton("Batal", null)
@@ -132,6 +136,7 @@ public class HomeActivity extends AppCompatActivity
 
     }
 
+
     @Override
     public void onClick(View v) {
         Intent i;
@@ -139,17 +144,46 @@ public class HomeActivity extends AppCompatActivity
             case R.id.layanan:
                 i = new Intent(this, LayananActivity.class);
                 startActivity(i);
+
                 break;
             case R.id.pemesanan:
                 i = new Intent(this, PemesananActivity.class);
                 startActivity(i);
+
                 break;
             case R.id.nota:
                 i = new Intent(this, NotakuActivity.class);
                 startActivity(i);
+
                 break;
             default:
                 break;
         }
+
     }
+    public void oonBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("E-Laundry")
+                .setMessage("Apakah Anda yakin ingin keluar ?")
+                .setIcon(R.drawable.elaundrylogin)
+                .setCancelable(false)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+
+                    }
+                })
+                .setNegativeButton("Tidak", null)
+                .show();
+    }
+
+    private void logout() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+
+    }
+
 }
