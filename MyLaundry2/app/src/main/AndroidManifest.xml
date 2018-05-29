@@ -72,12 +72,9 @@
         <activity
             android:name=".DetailTransaksiActivity"
             android:label="Detail Transaksi" />
-
         <activity
             android:name=".PemesananActivity"
             android:label="Pemesanan" />
-
-
         <activity
             android:name=".TulisEmail"
             android:label="Kritik dan Saran" />

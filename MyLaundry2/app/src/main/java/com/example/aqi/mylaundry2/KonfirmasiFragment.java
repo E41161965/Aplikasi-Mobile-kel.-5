@@ -1,12 +1,12 @@
 package com.example.aqi.mylaundry2;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -24,17 +24,21 @@ public class KonfirmasiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_konfirmasi, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_konfirmasi, container, false);
+
+        Button button = (Button) rootView.findViewById(R.id.lanjutkan);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+        return rootView;
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-    }
-
-    public void lanjutkan(View view){
-        Intent intent = new Intent(getActivity(), ProsesFragment.class);
-        getActivity().startActivity(intent);
     }
 }

@@ -246,7 +246,7 @@ android:layout_height="match_parent"
                 android:gravity="top"
                 android:inputType="textMultiLine"
                 android:lines="5"
-                android:hint="Catatan Pelanggan"/>
+                android:hint="Tulis Catatan Anda Disini..."/>
         </android.support.design.widget.TextInputLayout>
     </android.support.v7.widget.CardView>
 
