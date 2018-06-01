@@ -1,47 +1,36 @@
 package com.example.aqi.mylaundry2;
 
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.regex.Pattern;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class OrderFragment extends Fragment {
-
-    private static final String TAG = "OrderFragment";
-
+public class OrderActivity extends AppCompatActivity {
     Dialog mDialog;
 
 
-    public OrderFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        Log.d(TAG, "onCreate: Started.");
-        mDialog = new Dialog(getActivity());
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_order, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_order);
+
+        //Menambahkan tombol back pada appbar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mDialog = new Dialog(this);
 
         // Membaca dan menentukan isi TexTView
-        TextView textView1 = (TextView) rootView.findViewById(R.id.textView3);
+        TextView textView1 = (TextView) findViewById(R.id.textView3);
         textView1.setText("+Tambahan");
         // Membuat span dengan tampilan berbeda dan dapat diklik
         new PatternEditableBuilder().
@@ -51,13 +40,14 @@ public class OrderFragment extends Fragment {
                             public void onSpanClicked(String text) {
 //                                Toast.makeText(getActivity(), "Clicked username: " + text,
 //                                        Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getActivity(), TambahanActivity.class);
-                                getActivity().startActivity(intent);
+                                Intent intent = new Intent(OrderActivity.this, TambahanActivity.class);
+                                startActivity(intent);
+                                finish();
                             }
                         }).into(textView1);
 
         // Membaca dan menentukan isi TexTView
-        TextView textView2 = (TextView) rootView.findViewById(R.id.textView5);
+        TextView textView2 = (TextView) findViewById(R.id.textView5);
         textView2.setText("+DetailTransaksi");
         // Membuat span dengan tampilan berbeda dan dapat diklik
         new PatternEditableBuilder().
@@ -67,12 +57,13 @@ public class OrderFragment extends Fragment {
                             public void onSpanClicked(String text) {
 //                                Toast.makeText(getActivity(), "Clicked username: " + text,
 //                                        Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getActivity(), DetailTransaksiActivity.class);
-                                getActivity().startActivity(intent);
+                                Intent intent = new Intent(OrderActivity.this, DetailTransaksiActivity.class);
+                                startActivity(intent);
+                                finish();
                             }
                         }).into(textView2);
 
-        Button button = (Button) rootView.findViewById(R.id.buttonOrder);
+        Button button = (Button) findViewById(R.id.buttonOrder);
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -91,11 +82,23 @@ public class OrderFragment extends Fragment {
                 mDialog.show();
             }
         });
-        return rootView;
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            Intent intent = new Intent(OrderActivity.this, PemesananActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(OrderActivity.this, PemesananActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -79,6 +79,15 @@
         <activity
             android:name=".ProfilEditActivity"
             android:label="Edit Profil" />
+        <activity
+            android:name=".KonfirmasiActivity"
+            android:label="Konfirmasi" />
+        <activity
+            android:name=".ProsesActivity"
+            android:label="Proses" />
+        <activity
+            android:name=".OrderActivity"
+            android:label="Order" />
     </application>
 
 </manifest>
