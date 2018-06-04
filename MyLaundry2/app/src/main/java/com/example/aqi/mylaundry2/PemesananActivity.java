@@ -18,9 +18,12 @@ public class PemesananActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<String> tv1;
+    private ArrayList<String> tv2;
     private ArrayList<Integer> gambar;
     //Daftar Judul
     private String[] Judul = {"Order", "Konfirmasi", "Proses"};
+    //Daftar Deskripsi
+    private String[] Deskripsi = {"Silahkan order disini", "Silahkan konfirmasi orderan disini", "Silahkan melihat proses orderan disini"};
     //Daftar Gambar
     private int[] Gambar = {R.drawable.order, R.drawable.konfirmasi, R.drawable.proses};
 
@@ -34,6 +37,7 @@ public class PemesananActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         tv1 = new ArrayList<>();
+        tv2 = new ArrayList<>();
         gambar = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
         DaftarItem();
@@ -42,7 +46,7 @@ public class PemesananActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter = new PemesananViewAdapter(tv1, gambar);
+        adapter = new PemesananViewAdapter(tv1, tv2, gambar);
         //Memasang Adapter pada RecyclerView
         recyclerView.setAdapter(adapter);
     }
@@ -52,6 +56,7 @@ public class PemesananActivity extends AppCompatActivity {
         for (int w=0; w<Judul.length; w++){
             gambar.add(Gambar[w]);
             tv1.add(Judul[w]);
+            tv2.add(Deskripsi[w]);
         }
     }
 
