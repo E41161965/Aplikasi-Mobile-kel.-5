@@ -3,6 +3,7 @@ package com.example.aqi.mylaundry2;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -29,8 +30,7 @@ public class PemesananActivity extends AppCompatActivity {
         //set the indicator
         tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.colorAccent));
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        final PagerAdapterPemesanan adapter = new PagerAdapterPemesanan
-                (getSupportFragmentManager(), tabLayout.getTabCount());
+        final PagerAdapterPemesanan adapter = new PagerAdapterPemesanan(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

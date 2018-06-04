@@ -50,15 +50,16 @@ public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
-
     public final static String TAG_USERNAME = "username";
     public final static String TAG_ID = "id";
+    public final static String TAG_PASSWORD = "password";
+
 
     String tag_json_obj = "json_obj_req";
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username;
+    String id, username,nama,alamat,nohp,password;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -88,6 +89,7 @@ public class LoginActivity extends AppCompatActivity {
         session = sharedpreferences.getBoolean(session_status, false);
         id = sharedpreferences.getString(TAG_ID, null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
+
 
         if (session) {
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);

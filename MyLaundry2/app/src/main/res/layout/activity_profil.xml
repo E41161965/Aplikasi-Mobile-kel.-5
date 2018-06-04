@@ -38,46 +38,33 @@ tools:context="com.example.aqi.mylaundry2.ProfilActivity">
             android:layout_marginTop="20dp"
             android:text="Profil Pribadi" />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        <EditText
-            android:id="@+id/editNamaLengkap"
+
+        <TextView
+            android:id="@+id/NamaLengkap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:drawableLeft="@drawable/ic_account_circle_black_24dp"
             android:drawablePadding="6dp"
-            android:hint="Nama Lengkap" />
-        </android.support.design.widget.TextInputLayout>
+             />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        <EditText
-            android:id="@+id/editAlamat"
+
+
+        <TextView
+            android:id="@+id/Alamat"
             android:drawableLeft="@drawable/ic_home"
             android:drawablePadding="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Alamat" />
-        </android.support.design.widget.TextInputLayout>
+             />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="12" >
-        <EditText
-            android:id="@+id/editNoTelpon"
+        <TextView
+            android:id="@+id/notelpon"
             android:drawableLeft="@drawable/ic_call_black_24dp"
             android:drawablePadding="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:hint="Nomor Telepon" />
-        </android.support.design.widget.TextInputLayout>
+             />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -94,44 +81,24 @@ tools:context="com.example.aqi.mylaundry2.ProfilActivity">
             android:textSize="16dp"
             android:layout_marginTop="10dp" />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:id="@+id/editText_email"
+
+            <TextView
+                android:id="@+id/username"
                 android:layout_width="match_parent"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
                 android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                 android:drawablePadding="6dp"
                 android:layout_height="wrap_content" />
-        </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:id="@+id/editText_password"
+
+
+            <TextView
+                android:id="@+id/password"
                 android:drawableLeft="@drawable/ic_lock_black_24dp"
                 android:drawablePadding="6dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password" />
-        </android.support.design.widget.TextInputLayout>
+                 />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <EditText
-                android:id="@+id/editText_passwordAgain"
-                android:drawableLeft="@drawable/ic_lock_black_24dp"
-                android:drawablePadding="6dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Re-type your password" />
-        </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -26,7 +26,7 @@ public class TulisEmail extends AppCompatActivity {
             public void onClick(View v) {
                 String mess = ((EditText)findViewById(R.id.txtMessage)).getText().toString();
                 Intent mail = new Intent(Intent.ACTION_SEND);
-                mail.putExtra(Intent.EXTRA_EMAIL,new String[]{"elaundry214@gmailbutton.com"});
+                mail.putExtra(Intent.EXTRA_EMAIL,new String[]{"elaundry214@gmail.com"});
                 mail.putExtra(Intent.EXTRA_TEXT, mess);
                 mail.setType("message/rfc822");
                 startActivity(Intent.createChooser(mail, "Send email via:"));
