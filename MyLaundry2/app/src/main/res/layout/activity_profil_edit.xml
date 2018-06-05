@@ -52,6 +52,22 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:hint="Alamat" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="12" >
+            <EditText
+                android:id="@+id/editNoTelpon"
+                android:drawableLeft="@drawable/ic_call_black_24dp"
+                android:drawablePadding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:hint="Nomor Telepon" />
+        </android.support.design.widget.TextInputLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -71,9 +87,10 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <EditText
-                android:id="@+id/editText_username"
+                android:id="@+id/editText_email"
                 android:layout_width="match_parent"
-                android:hint="Username"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                 android:drawablePadding="6dp"
                 android:layout_height="wrap_content" />
@@ -89,7 +106,7 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                 />
+                android:hint="Password" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -102,7 +119,7 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                 />
+                android:hint="Re-type your password" />
         </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout

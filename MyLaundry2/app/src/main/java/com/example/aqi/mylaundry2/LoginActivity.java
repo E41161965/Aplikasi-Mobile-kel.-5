@@ -50,19 +50,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
+
     public final static String TAG_USERNAME = "username";
     public final static String TAG_ID = "id";
-    public final static String TAG_NAMA = "nama";
-    public final static String TAG_ALAMAT = "alamat";
-    public final static String TAG_NOHP = "nohp";
-    public final static String TAG_PASSWORD = "password";
-
 
     String tag_json_obj = "json_obj_req";
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username,nama,alamat,nohp,password;
+    String id, username;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -91,12 +87,7 @@ public class LoginActivity extends AppCompatActivity {
         sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         session = sharedpreferences.getBoolean(session_status, false);
         id = sharedpreferences.getString(TAG_ID, null);
-        nama = sharedpreferences.getString(TAG_NAMA, null);
-        alamat = sharedpreferences.getString(TAG_ALAMAT, null);
-        nohp = sharedpreferences.getString(TAG_NOHP, null);
-        password = sharedpreferences.getString(TAG_PASSWORD, null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
-
 
         if (session) {
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
@@ -177,10 +168,6 @@ public class LoginActivity extends AppCompatActivity {
                     if (success == 1) {
                         String username = jObj.getString(TAG_USERNAME);
                         String id = jObj.getString(TAG_ID);
-                        String nama = jObj.getString(TAG_NAMA);
-                        String alamat = jObj.getString(TAG_ALAMAT);
-                        String nohp = jObj.getString(TAG_NOHP);
-                        String password = jObj.getString(TAG_PASSWORD);
 
                         Log.e("Successfully Login!", jObj.toString());
 
@@ -191,10 +178,6 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putBoolean(session_status, true);
                         editor.putString(TAG_ID, id);
                         editor.putString(TAG_USERNAME, username);
-                        editor.putString(TAG_NAMA, nama);
-                        editor.putString(TAG_ALAMAT, alamat);
-                        editor.putString(TAG_PASSWORD, password);
-                        editor.putString(TAG_NOHP, nohp);
                         editor.commit();
 
                         // Memanggil main activity

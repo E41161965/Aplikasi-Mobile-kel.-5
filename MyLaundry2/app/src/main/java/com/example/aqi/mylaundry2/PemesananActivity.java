@@ -44,6 +44,7 @@ public class PemesananActivity extends AppCompatActivity {
         //Menggunakan Layout Manager, Dan Membuat List Secara Vertical
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adapter = new PemesananViewAdapter(tv1, tv2, gambar);
         //Memasang Adapter pada RecyclerView
