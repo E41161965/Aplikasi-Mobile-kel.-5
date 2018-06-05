@@ -2,10 +2,13 @@ package com.example.aqi.mylaundry2;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
@@ -18,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -26,6 +30,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import static com.example.aqi.mylaundry2.LoginActivity.TAG_ALAMAT;
+import static com.example.aqi.mylaundry2.LoginActivity.TAG_ID;
+import static com.example.aqi.mylaundry2.LoginActivity.TAG_NAMA;
+import static com.example.aqi.mylaundry2.LoginActivity.TAG_NOHP;
+import static com.example.aqi.mylaundry2.LoginActivity.TAG_PASSWORD;
+import static com.example.aqi.mylaundry2.LoginActivity.TAG_USERNAME;
 
 
 public class ProfilActivity extends AppCompatActivity {
@@ -33,12 +43,49 @@ public class ProfilActivity extends AppCompatActivity {
     private ImageView imageView;
     private String userChoosenTask;
     private Button edit;
+    private TextView nohptxt;
+    private TextView passwordtxt;
+    private TextView usernametxt;
+    private TextView alamattxt;
+    private TextView namatxt;
 
+    @Override
+    protected void onResume() {
+        SharedPreferences pref = getSharedPreferences("my_shared_preferences", Context.MODE_PRIVATE);
+        final String id = pref.getString(TAG_ID, null);
+        final String username = pref.getString(TAG_USERNAME, null);
+        final String password = pref.getString(TAG_PASSWORD, null);
+        final String nama = pref.getString(TAG_NAMA, null);
+        final String alamat = pref.getString(TAG_ALAMAT, null);
+        final String nohp = pref.getString(TAG_NOHP, null);
+
+        passwordtxt.setText(password);
+        usernametxt.setText(username);
+        namatxt.setText(nama);
+        alamattxt.setText(alamat);
+        nohptxt.setText(nohp);
+
+
+        super.onResume();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
+        usernametxt = (TextView) findViewById(R.id.username);
+        namatxt = (TextView) findViewById(R.id.NamaLengkap);
+        alamattxt = (TextView) findViewById(R.id.Alamat);
+        passwordtxt = (TextView) findViewById(R.id.password);
+        nohptxt = (TextView) findViewById(R.id.notelpon);
+
+        SharedPreferences pref = getSharedPreferences("my_shared_preferences", Context.MODE_PRIVATE);
+        final String id = pref.getString(TAG_ID, null);
+        final String username = pref.getString(TAG_USERNAME, null);
+        final String password = pref.getString(TAG_PASSWORD, null);
+        final String nama = pref.getString(TAG_NAMA, null);
+        final String alamat = pref.getString(TAG_ALAMAT, null);
+        final String nohp = pref.getString(TAG_NOHP, null);
 
         //Menambahkan tombol back pada appbar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -51,9 +98,15 @@ public class ProfilActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ProfilActivity.this, ProfilEditActivity.class);
                 startActivity(intent);
-                finish();
+
             }
         });
+
+        passwordtxt.setText(password);
+        usernametxt.setText(username);
+        namatxt.setText(nama);
+        alamattxt.setText(alamat);
+        nohptxt.setText(nohp);
 
         imageView = (ImageView) findViewById(R.id.userphoto);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -188,8 +241,6 @@ public class ProfilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            Intent intent = new Intent(ProfilActivity.this, HomeActivity.class);
-            startActivity(intent);
             finish();
         }
         return super.onOptionsItemSelected(item);
@@ -197,8 +248,6 @@ public class ProfilActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(ProfilActivity.this, HomeActivity.class);
-        startActivity(intent);
         finish();
     }
 }

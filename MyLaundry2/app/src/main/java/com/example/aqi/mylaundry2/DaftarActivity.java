@@ -16,18 +16,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
-
 
 public class DaftarActivity extends AppCompatActivity {
 
@@ -62,7 +58,7 @@ public class DaftarActivity extends AppCompatActivity {
                     && conMgr.getActiveNetworkInfo().isAvailable()
                     && conMgr.getActiveNetworkInfo().isConnected()) {
             } else {
-                Toast.makeText(getApplicationContext(), "No Internet Connection",
+                Toast.makeText(getApplicationContext(), "Tidak Ada Sambungan",
                         Toast.LENGTH_LONG).show();
             }
         }
@@ -86,7 +82,7 @@ public class DaftarActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 String nama = txt_nama.getText().toString();
                 String alamat = txt_alamat.getText().toString();
-                String nohp = txt_no_hp.getText().toString();
+                String nohp =txt_no_hp.getText().toString();
                 String username = txt_username.getText().toString();
                 String password = txt_password.getText().toString();
                 String konfirmasi_password = txt_password_again.getText().toString();
@@ -128,13 +124,6 @@ public class DaftarActivity extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(),
                                 jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
-
-                        txt_nama.setText("");
-                        txt_alamat.setText("");
-                        txt_no_hp.setText("");
-                        txt_username.setText("");
-                        txt_password.setText("");
-                        txt_password_again.setText("");
                         finish();
 
 

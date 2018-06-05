@@ -64,8 +64,13 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
+<<<<<<< HEAD
                 android:maxLength="12"
                 android:hint="Nomor Telepon" />
+=======
+                android:hint="Nomor Telepon"
+                android:maxLength="12"/>
+>>>>>>> c3ac41975aa9b95712d44bee8c4e332762f5cc3b
         </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout
@@ -87,10 +92,9 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <EditText
-                android:id="@+id/editText_email"
+                android:id="@+id/editText_username"
                 android:layout_width="match_parent"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
+                android:hint="Username"
                 android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                 android:drawablePadding="6dp"
                 android:layout_height="wrap_content" />
@@ -106,7 +110,7 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Password" />
+                 />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -119,7 +123,7 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Re-type your password" />
+                 />
         </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout
