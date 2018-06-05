@@ -38,30 +38,26 @@ public class OrderActivity extends AppCompatActivity {
                         new PatternEditableBuilder.SpannableClickedListener() {
                             @Override
                             public void onSpanClicked(String text) {
-//                                Toast.makeText(getActivity(), "Clicked username: " + text,
-//                                        Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(OrderActivity.this, TambahanActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
                         }).into(textView1);
 
-//        // Membaca dan menentukan isi TexTView
-//        TextView textView2 = (TextView) findViewById(R.id.textView5);
-//        textView2.setText("+DetailTransaksi");
-//        // Membuat span dengan tampilan berbeda dan dapat diklik
-//        new PatternEditableBuilder().
-//                addPattern(Pattern.compile("\\+(\\w+)"), Color.BLUE,
-//                        new PatternEditableBuilder.SpannableClickedListener() {
-//                            @Override
-//                            public void onSpanClicked(String text) {
-////                                Toast.makeText(getActivity(), "Clicked username: " + text,
-////                                        Toast.LENGTH_SHORT).show();
-//                                Intent intent = new Intent(OrderActivity.this, DetailTransaksiActivity.class);
-//                                startActivity(intent);
-//                                finish();
-//                            }
-//                        }).into(textView2);
+        // Membaca dan menentukan isi TexTView
+        TextView textView2 = (TextView) findViewById(R.id.textView5);
+        textView2.setText("+DetailTransaksi");
+        // Membuat span dengan tampilan berbeda dan dapat diklik
+        new PatternEditableBuilder().
+                addPattern(Pattern.compile("\\+(\\w+)"), Color.BLUE,
+                        new PatternEditableBuilder.SpannableClickedListener() {
+                            @Override
+                            public void onSpanClicked(String text) {
+                                Intent intent = new Intent(OrderActivity.this, DetailTransaksiActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }).into(textView2);
 
         Button button = (Button) findViewById(R.id.buttonOrder);
         button.setOnClickListener(new View.OnClickListener()

@@ -34,9 +34,9 @@
 
                 <ImageView
                     android:id="@+id/imgProses"
-                    android:layout_width="40dp"
+                    android:layout_width="43dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_proses"/>
+                    android:src="@drawable/ic_proses" />
 
                 <ImageView
                     android:id="@+id/imgCar"
@@ -85,6 +85,7 @@
                     android:text="STATUS : "/>
 
                 <TextView
+                    android:id="@+id/status"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -97,13 +98,13 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/textHistori"
+                    android:id="@+id/textDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
                     android:layout_centerHorizontal="true"
-                    android:text="Lihat history pengiriman"
+                    android:text="Detail transaksi"
                     android:textColor="@color/colorAccent"
                     android:drawableRight="@android:drawable/arrow_down_float"
                     android:drawablePadding="5dp"/>
@@ -111,33 +112,12 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/linearHistori"
+                android:id="@+id/linearDetail"
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Tanggal"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Status"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -147,7 +127,7 @@
                     android:layout_marginBottom="10dp"/>
 
                 <ListView
-                    android:id="@+id/listHistori"
+                    android:id="@+id/listDetail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 

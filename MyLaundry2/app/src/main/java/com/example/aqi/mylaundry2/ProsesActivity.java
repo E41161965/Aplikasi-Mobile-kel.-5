@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class ProsesActivity extends AppCompatActivity {
-    LinearLayout linearHistori;
-    TextView textHistori;
+    LinearLayout linearDetail;
+    TextView textDetail;
+    ListView listDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +24,20 @@ public class ProsesActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        textHistori     = (TextView) findViewById(R.id.textHistori);
-        linearHistori   = (LinearLayout) findViewById(R.id.linearHistori);
+        textDetail     = (TextView) findViewById(R.id.textDetail);
+        linearDetail   = (LinearLayout) findViewById(R.id.linearDetail);
+        listDetail     = (ListView) findViewById(R.id.listDetail);
 
-        textHistori.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG); // garis bawah
-        textHistori.setOnClickListener(new View.OnClickListener() {
+        textDetail.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG); // garis bawah
+        textDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (linearHistori.getVisibility() == View.GONE){
-                    linearHistori.setVisibility(View.VISIBLE);
-                    textHistori.setCompoundDrawablesWithIntrinsicBounds(0, 0, android.R.drawable.arrow_up_float, 0);
+                if (linearDetail.getVisibility() == View.GONE){
+                    linearDetail.setVisibility(View.VISIBLE);
+                    textDetail.setCompoundDrawablesWithIntrinsicBounds(0, 0, android.R.drawable.arrow_up_float, 0);
                 } else {
-                    linearHistori.setVisibility(View.GONE);
-                    textHistori.setCompoundDrawablesWithIntrinsicBounds(0, 0, android.R.drawable.arrow_down_float, 0);
+                    linearDetail.setVisibility(View.GONE);
+                    textDetail.setCompoundDrawablesWithIntrinsicBounds(0, 0, android.R.drawable.arrow_down_float, 0);
                 }
             }
         });

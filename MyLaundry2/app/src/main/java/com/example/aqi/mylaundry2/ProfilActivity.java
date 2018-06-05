@@ -117,42 +117,6 @@ public class ProfilActivity extends AppCompatActivity {
         });
     }
 
-//    /**
-//     * method ini dipanggil saat kita menekan button simpan
-//     */
-//    private void edit(){
-//        String e = email.getText().toString();
-//        String p = password.getText().toString();
-//        String rtp = retypepassword.getText().toString();
-//
-//        if(!isValidateEmail(e)){
-//            Toast.makeText(this, "Harap Masukkan Email Anda atau Email Anda Salah",Toast.LENGTH_SHORT).show();
-//        }else if(!isMatch(p,rtp)){
-//            Toast.makeText(this, "Password Tidak Cocok",Toast.LENGTH_SHORT).show();
-//        }else{
-//
-//        }
-//    }
-//
-//    /**
-//     *
-//     * @param email
-//     * Method dibawah ini untuk validasi email kosong atau salah
-//     */
-//    private boolean isValidateEmail(String email){
-//        return !TextUtils.isEmpty(email)&& Patterns.EMAIL_ADDRESS.matcher(email).matches();
-//    }
-//
-//    /**
-//     *
-//     * @param password
-//     * @param retypePassword
-//     * method ini digunakan untuk mencocokan password dengan retype password
-//     */
-//    private boolean isMatch(String password, String retypePassword){
-//        return password.equals(retypePassword);
-//    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
