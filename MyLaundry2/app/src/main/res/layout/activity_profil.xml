@@ -122,7 +122,6 @@
 </android.support.v7.widget.CardView>
 </LinearLayout>
 
-
         <Button
             android:id="@+id/buttonEdit"
             android:layout_width="match_parent"
