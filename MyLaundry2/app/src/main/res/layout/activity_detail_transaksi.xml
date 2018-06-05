@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.aqi.mylaundry2.DetailTransaksiActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -21,13 +25,15 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="center"
+                 android:textStyle="bold"
                  android:text="No Transaksi"/>
 
              <TextView
@@ -35,6 +41,7 @@
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="center"
+                 android:textStyle="bold"
                  android:text="Nama Petugas"/>
          </LinearLayout>
 
@@ -46,6 +53,7 @@
              android:paddingBottom="10dp">
 
              <TextView
+                 android:id="@+id/noTransaksi"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
@@ -53,6 +61,7 @@
                  android:hint="No Transaksi"/>
 
              <TextView
+                 android:id="@+id/namaPetugas"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
@@ -81,23 +90,28 @@
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="center"
+                 android:textStyle="bold"
                  android:text="Biodata Anda"/>
          </LinearLayout>
 
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:orientation="horizontal"
+             android:orientation="vertical"
+             android:layout_marginBottom="5dp"
              android:gravity="center">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
+                 android:layout_marginBottom="5dp"
                  android:gravity="left"
-                 android:text="Nama                                  :"/>
+                 android:textStyle="bold"
+                 android:text="Nama : "/>
 
              <TextView
+                 android:id="@+id/namaPelanggan"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
@@ -106,21 +120,30 @@
          </LinearLayout>
 
          <LinearLayout
-             android:layout_width="match_parent"
+             android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:inputType="textMultiLine"
-                 android:lines="4"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Alamat                                :"/>
+                 android:textStyle="bold"
+                 android:text="Alamat : "/>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
+                 android:id="@+id/alamat"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:inputType="textMultiLine"
@@ -133,17 +156,21 @@
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:orientation="horizontal"
-             android:gravity="center">
+             android:orientation="vertical"
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
+                 android:layout_marginBottom="5dp"
                  android:gravity="left"
-                 android:text="No Telepon                        :"/>
+                 android:textStyle="bold"
+                 android:text="No Telepon : "/>
 
              <TextView
+                 android:id="@+id/noTelepon"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
@@ -174,6 +201,7 @@
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="center"
+                 android:textStyle="bold"
                  android:text="Nota Anda"/>
          </LinearLayout>
 
@@ -181,20 +209,23 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Tanggal Masuk                  :"/>
+                 android:textStyle="bold"
+                 android:text="Tanggal Masuk"/>
 
              <TextView
+                 android:id="@+id/tglMasuk"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:gravity="left"
+                 android:gravity="right"
                  android:hint="Tanggal Masuk"/>
          </LinearLayout>
 
@@ -202,20 +233,23 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Tanggal Selesai                 :"/>
+                 android:textStyle="bold"
+                 android:text="Tanggal Selesai"/>
 
              <TextView
+                 android:id="@+id/tglSelesai"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:gravity="left"
+                 android:gravity="right"
                  android:hint="Tanggal Selesai"/>
          </LinearLayout>
 
@@ -223,20 +257,23 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Parfum                                :"/>
+                 android:textStyle="bold"
+                 android:text="Parfum"/>
 
              <TextView
+                 android:id="@+id/parfum"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:gravity="left"
+                 android:gravity="right"
                  android:hint="Parfum"/>
          </LinearLayout>
         </LinearLayout>
@@ -263,6 +300,7 @@
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="center"
+                 android:textStyle="bold"
                  android:text="Laundry Kiloan"/>
          </LinearLayout>
 
@@ -270,20 +308,23 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Layanan                              :"/>
+                 android:textStyle="bold"
+                 android:text="Layanan"/>
 
              <TextView
+                 android:id="@+id/layanan"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:gravity="left"
+                 android:gravity="right"
                  android:hint="Layanan"/>
          </LinearLayout>
 
@@ -291,20 +332,23 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Jumlah / Kg                       :"/>
+                 android:textStyle="bold"
+                 android:text="Jumlah / Kg"/>
 
              <TextView
+                 android:id="@+id/jumlah"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:gravity="left"
+                 android:gravity="right"
                  android:hint="Jumlah / Kg"/>
          </LinearLayout>
 
@@ -312,20 +356,23 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="left"
-                 android:text="Harga                                  :"/>
+                 android:textStyle="bold"
+                 android:text="Harga"/>
 
              <TextView
+                 android:id="@+id/harga"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
-                 android:gravity="left"
+                 android:gravity="right"
                  android:hint="Harga"/>
          </LinearLayout>
         </LinearLayout>
@@ -344,37 +391,142 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:orientation="horizontal"
-             android:gravity="center">
+             android:gravity="center"
+             android:layout_marginBottom="5dp">
 
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:gravity="center"
+                 android:textStyle="bold"
                  android:text="Laundry Satuan"/>
          </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tambahan"
+                            android:gravity="center"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Harga"
+                            android:gravity="center"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/colorGrey"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <ListView
+                        android:id="@+id/listDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    android:text="Total bayar"/>
+
+                <TextView
+                    android:id="@+id/totalBayar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="Total bayar"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray">
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    android:text="Catatan Pelanggan"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginBottom="5dp">
 
                 <TextView
+                    android:id="@+id/catatanPelanggan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
                     android:layout_weight="1"
                     android:gravity="left"
-                    android:text="Layanan                              :"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left"
-                    android:hint="Layanan"/>
+                    android:hint="Catatan Pelanggan"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttonstyle"
+        android:text="edit"
+        android:textColor="#fff" />
 </LinearLayout>
+</ScrollView>

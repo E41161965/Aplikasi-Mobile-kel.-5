@@ -64,6 +64,7 @@ tools:context="com.example.aqi.mylaundry2.ProfilEditActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
+                android:maxLength="12"
                 android:hint="Nomor Telepon" />
         </android.support.design.widget.TextInputLayout>
 
